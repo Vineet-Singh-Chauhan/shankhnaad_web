@@ -33,8 +33,20 @@ function submitForm(e){
     const name = form.querySelector(".name").value;
     const email = form.querySelector(".email").value;
     const phone = form.querySelector(".phone").value;
-    const message = form.querySelector(".message").value;
-    validation(form,name,email,phone,message);
+    if(form.classList.contains("contact-form")){
+        const message = form.querySelector(".message").value;
+        validation(form,name,email,phone,message);
+    }
+    if(form.classList.contains("registration-form")){
+        let branch = form.querySelector(".branch").value;
+        // console.log(branch.value)
+        const year = form.querySelector(".year").value;
+        console.log(year)
+        const message = null;
+        validation(form,name,email,phone,message,branch,year);
+    }
+    
+    
     
 }
 
@@ -86,9 +98,33 @@ function saveContactInfo(form,name,email,phone,message){
 }
 
 
+function createNewUser(form,name,email,phone,branch,year){
+    set(ref(db,"Users/"+name),{
+        userEmail : email,
+        userPhone : phone,
+        userBranch:branch,
+        userYear:year
+    }).then(()=>{
+        swal("Hurray! "+ name, "You have been registered successfully", "success");
+        form.reset();
+        Array.from(form.querySelectorAll(".fa-circle-check")).forEach((element)=>{
+            element.classList.add("invisible");
+            element.classList.remove("visible");
+        })
+        
+    }).catch(()=>{
+        swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
+        form.reset();
+        Array.from(form.querySelectorAll(".fa-circle-check")).forEach((element)=>{
+            element.classList.add("invisible");
+            element.classList.remove("visible");
+        })
+    })
+}
 
 
-function validation(form,name,email,phone,message){
+
+function validation(form,name,email,phone,message,branch,year){
     let nameregex =/^[a-zA-Z][a-zA-Z\s]+$/;
     let emailregex = /[a-zA-Z0-9]+@(gmail|yahoo|outlook|duck)\.com/;
     let phoneregex = /^[6-9]\d{9}$/;
@@ -114,13 +150,42 @@ function validation(form,name,email,phone,message){
     else{
         setSuccessMsg( form.querySelector(".phone"));
     }
-    if(message.trim()==0){
-        setErrorMsg( form.querySelector(".message"), "Message cannot be blank ");
-        return;
-    }
-    else{
-        setSuccessMsg( form.querySelector(".message"));
+    
+
+
+    if(form.classList.contains("contact-form")){
+        if(message.trim()==0){
+            setErrorMsg( form.querySelector(".message"), "Message cannot be blank ");
+            return;
+        }
+        else{
+            setSuccessMsg( form.querySelector(".message"));
+        }
+        saveContactInfo(form,name,email,phone,message);
     }
 
-    saveContactInfo(form,name,email,phone,message);
+    if(form.classList.contains("registration-form")){
+
+        if(branch==0){
+            console.log(branch)
+            setErrorMsg( form.querySelector(".branch"), "Please select your branch ");
+            return;
+        }
+        else{
+            setSuccessMsg( form.querySelector(".branch"));
+        }
+        if(year==0){
+            setErrorMsg( form.querySelector(".year"), "Please select your year ");
+            return;
+        }
+        else{
+            setSuccessMsg( form.querySelector(".year"));
+        }
+
+        createNewUser(form,name,email,phone,branch,year);
+
+        
+    }
 }
+
+
