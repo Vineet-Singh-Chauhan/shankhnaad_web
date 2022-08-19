@@ -1,0 +1,40 @@
+.fa-circle-check{
+    position:absolute;
+    right:10px;
+    bottom:12px;
+    visibility: hidden;
+}
+.fa-circle-exclamation{
+    position:absolute;
+    right:10px;
+    bottom:30px;
+    visibility: hidden;
+}
+.wrapper small{
+    color:red;
+}
+.wrapper{
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.bg-img{
+    height:100vh;
+    background: url("../images/LandingBg.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.form-control{
+    color:white !important;
+    outline: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    border-radius: 2px 2px 0px 0px!important;
+}
+.form-control:focus{
+    border-color: #86b6fe00 !important;  
+    box-shadow: none !important;
+    border-bottom: 2px solid rgba(0, 113, 205, 0.781) !important;
+
+}

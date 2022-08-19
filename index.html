@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form with Firebase</title>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--stylesheets-->
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="bg-img">
+    <section class="contact-section text-white flex justify-content-center align-items-center">
+
+        <div class=" container py-3 row mx-auto gx-5">
+
+            <div class="contactUs-image col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, blanditiis perferendis. Nulla a
+                    rerum veritatis est. Labore eligendi illo modi rerum in optio magnam accusantium dolorem, nemo saepe
+                    fuga minus eius adipisci eveniet ex libero blanditiis fugiat reprehenderit asperiores sapiente
+                    nesciunt possimus tenetur. Molestias tempora corporis consectetur? Tenetur, quis odio? </p>
+            </div>
+
+            <form class="contact-form col-12 col-md-6">
+                <h1 class="display-3 text-center my-4 bold">Contact Us</h1>
+
+                <div class="wrapper form-floating mb-3">
+                    <input type="text" placeholder="Enter Your Fullname " id="floatingInput"
+                        class="form-control name bg-transparent">
+                    <label for="floatingInput">Name</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation invisible"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="wrapper mb-3">
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                            placeholder="Enter Your E-mail">
+                        <label for="floatingInput">Email address</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 form-floating mb-3">
+                    <input type="number" placeholder="Enter Your phone number" id="floatingInput"
+                        class="form-control phone bg-transparent">
+                    <label for="floatingInput">Enter Your phone number</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="wrapper mb-3 form-floating mb-3">
+                    <textarea type="text" placeholder="Your Queries..." id="floatingInput"
+                        class="form-control message bg-transparent " id="phone"></textarea>
+                    <label for="floatingInput">Your Queries...</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <input class="btn btn-primary contact-btn rounded-1" type="submit" value="Submit">
+
+            </form>
+        </div>
+
+
+        <div class="registration-section on text-white flex justify-content-center align-items-center">
+            <form class="registration-form container">
+                <h1 class="display-3 text-center my-4 bold">Register in Shanknaad</h1>
+
+                <div class="wrapper form-floating mb-3">
+                    <input type="text" placeholder="Enter Your Fullname " id="floatingInput"
+                        class="form-control name bg-transparent">
+                    <label for="floatingInput">Name</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation invisible"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="wrapper mb-3">
+                    <div class="form-floating">
+                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                            placeholder="Enter Your E-mail">
+                        <label for="floatingInput">Email address</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3">
+                    <div class="form-floating">
+                        <input type="number" placeholder="Enter Your phone number" id="floatingInput"
+                            class="form-control phone bg-transparent">
+                        <label for="floatingInput">Enter Your phone number</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+                
+                <div class="wrapper mb-3 form-floating mb-3">
+                    <textarea type="text" placeholder="Your Queries..." id="floatingInput"
+                        class="form-control message bg-transparent " id="phone"></textarea>
+                    <label for="floatingInput">Your Queries...</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <input class="btn btn-outline-primary contact-btn rounded-1" type="submit" value="Register Now">
+
+            </form>
+        </div>
+    </section>
+    <!--sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Bootstrap Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--firebase scripts-->
+    <script type="module" src="assets/scripts/app.js"></script>
+
+</body>
+
+</html>
