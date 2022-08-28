@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Ambassador Registration Form</title>
+
+    <!--stylesheets-->
+    <link rel="stylesheet" href="./assets/stylesheets/style.css">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="bg-img">
+
+    <section>
+        <!--Campus Ambassador Registration-->
+        <form method="POST" class="blur-bg p-3 campusAmbassadorRegistration rounded container text-white my-5">
+            <h1 class="display-4 text-center my-4 bold">Campus Ambassador Registration</h1>
+
+            <div class="wrapper form-floating mb-3">
+                <input type="text" placeholder="Enter Your Fullname " id="floatingInput"
+                    class="form-control name bg-transparent">
+                <label for="floatingInput">Name</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
+            </div>
+
+            <div class="wrapper mb-3">
+                <div class="form-floating">
+                    <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                        placeholder="Enter Your E-mail">
+                    <label for="floatingInput">Email address</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+            </div>
+            <div class="gx-5 row justify-content-between">
+                <div class=" wrapper mb-3 col-6">
+                    <div class="form-floating">
+                        <input type="number" placeholder="Enter Your phone number" id="floatingInput"
+                            class="form-control phone bg-transparent">
+                        <label for="floatingInput">Enter Your phone number</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+                <div class="wrapper mb-3 col-6">
+                    <div class="form-floating">
+                        <input type="text" placeholder="Enter Your referral code" id="floatingInput"
+                            class="form-control ref-code bg-transparent">
+                        <label for="floatingInput">Enter Your referral code</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gx-5 row justify-content-between">
+                <div class=" wrapper mb-3 col-6">
+                    <div class="form-floating">
+                        <input type="number" placeholder="Enter Your  Initial Score " id="floatingInput"
+                            class="form-control initScore bg-transparent">
+                        <label for="floatingInput">Enter Your  Initial Score </label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+
+
+                <div class=" wrapper mb-3 col-6">
+                    <div class="form-floating">
+                        <input type="number" placeholder="Enter Your Registration score" id="floatingInput"
+                            class="form-control regScore bg-transparent">
+                        <label for="floatingInput">Enter Your Registration score</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <input class="btn btn-primary contact-btn rounded-1 mb-5 sign-in-button " type="submit"
+                value="Register Now">
+
+
+        </form>
+
+    </section>
+<script type="module" src="./assets/scripts/app.js"></script>
+</body>
+
+</html>
