@@ -52,3 +52,6 @@ input::-webkit-inner-spin-button {
     background-color: rgba(255, 255, 255, 0.233) !important;
     backdrop-filter: blur(10px) !important;
 }
+::file-selector-button {
+    display: none;
+  }

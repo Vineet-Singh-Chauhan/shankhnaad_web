@@ -43,77 +43,129 @@ export function saveContactInfo(form,name,email,phone,message){
         swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
         clearForm(form);
     })
-}
+} 
 
-export function createNewUser(form,name,email,phone,branch,year,refCode,selectedEvents){
+
+export function createIndividualUser(form,infoPack){
     let count = 0;
-    selectedEvents.forEach((e)=>{
-        if(form.classList.contains("individualRegistration")){
-            set(ref(db,`Registrations/individualRegistrations/${e}/`+name),{
-                userEmail : email,
-                userPhone : phone,
-                userBranch:branch,
-                userYear:year,
-                refCode:refCode,
-                
+    infoPack.selectedEvents.forEach((e)=>{
+        
+            set(ref(db,`Registrations/individualRegistrations/${e}/`+infoPack.name),{
+                age   : infoPack.age,
+                email : infoPack.email,
+                phone : infoPack.phone,
+                whatsApp:infoPack.whatsApp,
+                candidateType:infoPack.candidateType,
+                institute:infoPack.institute,
+                city:infoPack.city,
+                course:infoPack.course,
+                yearOrClass:infoPack.yearOrClass,
+                sample:infoPack.sample,
+                refCode:infoPack.refCode,
+                ID:infoPack.ID,
+                infoSource:infoPack.infoSource,
             }).then(count++)
-        }
-        else if(form.classList.contains("teamRegistration")){
-            set(ref(db,`Registrations/teamRegistrations/${e}/`+name),{
-                userEmail : email,
-                userPhone : phone,
-                userBranch:branch,
-                userYear:year,
-                refCode:refCode
-            }).then(count++)
-        }
         
     })
    
     const registrationCompleted = () => {
-        swal("Hurray! "+ name, "You have been registered successfully", "success");
+        swal("Hurray! "+ infoPack.name, "You have been registered successfully", "success");
         clearForm(form);
-        sendMail(true,email);
+        sendMail(true,infoPack.email);
         
     }
-    if(count==selectedEvents.length){
+    if(count==infoPack.selectedEvents.length){
         registrationCompleted();
     }
     else{
         swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
         clearForm(form);
-        sendMail(false,email);
+        sendMail(false,infoPack.email);
     }
-
-    
-    // set(ref(db,"Registrations/"+name),{
-    //     userEmail : email,
-    //     userPhone : phone,
-    //     userBranch:branch,
-    //     userYear:year,
-    //     refCode:refCode
-    // }).then(()=>{
-    //     swal("Hurray! "+ name, "You have been registered successfully", "success");
-    //     form.reset();
-    //     Array.from(form.querySelectorAll(".fa-circle-check")).forEach((element)=>{
-    //         element.classList.add("invisible");
-    //         element.classList.remove("visible");
-    //     });
-    //     sendMail(true,email);
-        
-    // }).catch(()=>{
-    //     swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
-    //     form.reset();
-    //     Array.from(form.querySelectorAll(".fa-circle-check")).forEach((element)=>{
-    //         element.classList.add("invisible");
-    //         element.classList.remove("visible");
-    //     });
-    //     sendMail(false,email);
-    // })
-
-    
-
 }
+
+
+export function createTeamUser(form,infoPack){
+    let count = 0;
+    infoPack.selectedEvents.forEach((e)=>{
+        
+            set(ref(db,`Registrations/teamRegistrations/${e}/`+infoPack.teamName),{
+                leaderName: infoPack.leaderName,
+                teamSize   : infoPack.teamSize,
+                email : infoPack.email,
+                phone : infoPack.phone,
+                whatsApp:infoPack.whatsApp,
+                candidateType:infoPack.candidateType,
+                institute:infoPack.institute,
+                city:infoPack.city,
+                sample:infoPack.sample,
+                refCode:infoPack.refCode,
+                ID:infoPack.ID,
+                infoSource:infoPack.infoSource,
+            }).then(count++)
+        
+    })
+   
+    const registrationCompleted = () => {
+        swal("Hurray! "+ infoPack.leaderName, "You have been registered successfully", "success");
+        clearForm(form);
+        sendMail(true,infoPack.email);
+        
+    }
+    if(count==infoPack.selectedEvents.length){
+        registrationCompleted();
+    }
+    else{
+        swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
+        clearForm(form);
+        sendMail(false,infoPack.email);
+    }
+}
+
+
+
+
+
+// export function createNewUser(form,name,email,phone,branch,year,refCode,selectedEvents){
+//     let count = 0;
+//     selectedEvents.forEach((e)=>{
+//         if(form.classList.contains("individualRegistration")){
+//             set(ref(db,`Registrations/individualRegistrations/${e}/`+name),{
+//                 userEmail : email,
+//                 userPhone : phone,
+//                 userBranch:branch,
+//                 userYear:year,
+//                 refCode:refCode,
+                
+//             }).then(count++)
+//         }
+//         else if(form.classList.contains("teamRegistration")){
+//             set(ref(db,`Registrations/teamRegistrations/${e}/`+name),{
+//                 userEmail : email,
+//                 userPhone : phone,
+//                 userBranch:branch,
+//                 userYear:year,
+//                 refCode:refCode
+//             }).then(count++)
+//         }
+        
+//     })
+   
+//     const registrationCompleted = () => {
+//         swal("Hurray! "+ name, "You have been registered successfully", "success");
+//         clearForm(form);
+//         sendMail(true,email);
+        
+//     }
+//     if(count==selectedEvents.length){
+//         registrationCompleted();
+//     }
+//     else{
+//         swal("Error! " , "Something went wrong,Try again later. If error persist contact our team ", "error");
+//         clearForm(form);
+//         sendMail(false,email);
+//     }
+// }
 
 
 export function createCampusAmbassador(form,name,email,phone,refCode,regScore,initScore){

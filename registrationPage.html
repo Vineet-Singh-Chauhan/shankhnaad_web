@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>पंजीकरण | शंखनाद'२२</title>
+
+    <!--styleSheets-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/stylesheets/style.css">
+
+    <!--googleFonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <!--SplideJS-->
+    <!-- <link rel="stylesheet" href="Shankhnaad/css/splide.min.css"> -->
+    
+    <!---Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+
+<body class="">
+
+
+    <!--Header -->
+    <div class="header">
+
+        <div class="nav">
+          <div class="logo">
+            <img src="images/FINAL PNG w-8.png" class="" alt="..." height="100px" width="100px">
+          </div>
+          <div class="menu">
+            <img onclick="openNav()" class="menu" src="images/menu.png" alt="..." >
+          </div>
+    
+        </div>
+    
+    
+    
+        <div id="myNav" class="overlay">
+    
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Events</a>
+            <a href="#">Contact Us</a>
+             </div>
+        </div>
+    
+    
+    </div>
+
+    <!--landing Section-->
+    <section class="landingSection group2 d-flex justify-content-center align-items-center">
+
+        <div class="display-2 text-white text-center border border-light border-2 py-3 px-5">पंजीकरण करें</div>
+
+    </section>
+
+    <!--DetailsSection-->
+    <section class="bg-dark py-5">
+
+        <div class="text-center gradient-text-blue display-5 p-5 ">
+            शंखनाद में पंजीकरण करें  
+        </div>
+
+        <div class="container d-flex">
+            <div class="blur-bg text-center py-2 text-white fs-3 flex-fill toggleIndividualEvents cursor-pointer" onclick="handleIndividualForm()">एकल प्रतियोगिताएँ </div>
+            <div class="bg-blur text-center py-2 text-white fs-3 flex-fill toggleGroupEvents cursor-pointer" onclick="handleTeamForm()">समूह प्रतियोगिताएँ </div>
+        </div>
+        
+        
+        <!--Individual Registration-->
+        <form  method="POST" class=" p-3 col-11 col-md-9 text-white mx-auto  registration-form individualRegistration rounded">
+            <h1 class="display-4 text-center text-white my-4 bold">एकल पंजीकरण</h1>
+
+            <div class="wrapper form-floating my-3">
+                <input type="text" placeholder=" " id="floatingInput"
+                    class="form-control name bg-transparent">
+                <label for="floatingInput">नाम</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
+            </div>
+
+            <div class="wrapper mb-3 d-flex gap-3">
+                <div class="form-floating">
+                    <input type="number" class="form-control age bg-transparent" id="floatingInput"
+                        placeholder=" ">
+                    <label for="floatingInput">उम्र </label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="form-floating flex-grow-1 ">
+                    <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                        placeholder=" ">
+                    <label for="floatingInput">ई मेल </label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                
+
+            </div>
+            <div class="g-3  row justify-content-between my-3">
+                <div class=" wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="number" placeholder=" " id="floatingInput" class="form-control phone bg-transparent">
+                        <label for="floatingInput">फोन नंबर(कॉल)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class=" wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="number" placeholder=" " id="floatingInput" class="form-control whatsappNumber bg-transparent">
+                        <label for="floatingInput">फोन नंबर(व्हाट्सप्प)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="g-3 row justify-content-between my-3">
+
+                <div class="wrapper mb-3  col-12 col-sm-6 mx-auto ">
+                    <div>
+                        
+                        <label for="">आप  हैं  :</label>
+                        <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 candidateType" aria-label=".form-select-lg example">
+                            <option value="0" class="bg-dark text-white">चुने</option>
+                            <option value="collegeStudent" class="bg-dark text-white">कॉलेज विद्यार्थी </option>
+                            <option value="schoolStudent" class="bg-dark text-white">स्कूल  विद्यार्थी </option>
+                        </select>
+                        <i class="fa-solid fa-circle-check "></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3  col-12 col-sm-6 mx-auto ">
+                    <div>
+                        
+                        <label for="">आप कहाँ से हैं  :</label>
+                        <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 institute" aria-label=".form-select-lg example">
+                            <option value="0" class="bg-dark text-white">चुने </option>
+                            <option value="UIT_RGPV" class="bg-dark text-white">यूआइटी,आरजीपीवी,भोपाल </option>
+                            <option value="SOIT" class="bg-dark text-white">एसओआइटी</option>
+                            <option value="OTHER" class="bg-dark text-white">अन्य : <input type="text" class="appearance-none form-control bg-transparent customInput" placeholder="School/College name ">
+                            </option>
+                        </select>
+                        <i class="fa-solid fa-circle-check "></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control city bg-transparent">
+                        <label for="floatingInput">शहर </label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control course bg-transparent">
+                        <label for="floatingInput">कोर्स</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control year_or_class bg-transparent">
+                        <label for="floatingInput">साल /कक्षा </label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control sample bg-transparent">
+                        <label for="floatingInput">नमूना कार्य (ड्राइव लिंक)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control ref-code bg-transparent">
+                        <label for="floatingInput">रेफरल कोड</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control ID bg-transparent">
+                        <label for="floatingInput">पहचान</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+        </div>
+
+        <div class="wrapper my-3">
+            <p class="my-3 ps-3">पंजीकरण के लिए ईवेंट चुनें:</p>
+            <div class="d-flex justify-content-around flex-wrap">
+
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox1" value="facePainting">
+                    <label class="form-check-label" for="inlineCheckbox1">आनन चित्रकारी</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox2" value="singing">
+                    <label class="form-check-label" for="inlineCheckbox2">स्वरागिनी</label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox3" value="fashionShow">
+                    <label class="form-check-label" for="inlineCheckbox3">परिधानिका</label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox4" value="dance">
+                    <label class="form-check-label" for="inlineCheckbox4">नृत्यांजलि </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox5" value="kaviSammelan">
+                    <label class="form-check-label" for="inlineCheckbox5">अमृतवर्षा  </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox6" value="rangoli">
+                    <label class="form-check-label" for="inlineCheckbox6"> सारंग </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox7" value="openMic">
+                    <label class="form-check-label" for="inlineCheckbox7"> अनकही  </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox8" value="debate">
+                    <label class="form-check-label" for="inlineCheckbox8"> वाद–विवाद  </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox9" value="extempore">
+                    <label class="form-check-label" for="inlineCheckbox9"> ओज  </label>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper form-floating my-3">
+            <input type="text" placeholder="  " id="floatingInput"
+                class="form-control infoSource bg-transparent">
+            <label for="floatingInput">आपको हमारे कार्यक्रम के बारे में कैसे पता चला?</label>
+            <i class="fa-solid fa-circle-check"></i>
+            <i class="fa-solid fa-circle-exclamation invisible"></i>
+            <small class="d-none">
+                Error Message
+            </small>
+        </div>
+            <input class="btn btn-outline-primary contact-btn rounded-1 mb-5 sign-in-button" type="submit" value="पंजीकरण करें">
+
+
+        </form>
+
+        <!--Team Registration-->
+        <form  method="POST" class=" p-3 col-11 col-md-9 text-white mx-auto registration-form teamRegistration rounded d-none">
+            <h1 class="display-4 text-white text-center my-4 bold">समूह पंजीकरण</h1>
+
+            <div class="wrapper form-floating my-3">
+                <input type="text" placeholder=" " id="floatingInput"
+                    class="form-control teamName bg-transparent">
+                <label for="floatingInput">टीम  का  नाम </label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
+            </div>
+
+            <div class="wrapper form-floating my-3">
+                <input type="text" placeholder=" " id="floatingInput"
+                    class="form-control name bg-transparent">
+                <label for="floatingInput">टीम लीडर का  नाम</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
+            </div>
+
+            <div class="wrapper mb-3 d-flex gap-3">
+
+                <div class="form-floating">
+                    <input type="number" class="form-control teamSize bg-transparent" id="floatingInput"
+                        placeholder=" ">
+                    <label for="floatingInput">टीम साईज </label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="form-floating flex-grow-1 ">
+                    <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                        placeholder=" ">
+                    <label for="floatingInput">ई मेल</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                
+
+            </div>
+            <div class="gx-5 row justify-content-between my-3">
+                <div class=" wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="number" placeholder=" " id="floatingInput" class="form-control phone bg-transparent">
+                        <label for="floatingInput">फोन नंबर (कॉल)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class=" wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="number" placeholder=" " id="floatingInput" class="form-control whatsappNumber bg-transparent">
+                        <label for="floatingInput">फोन नंबर (व्हाट्सप्प)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="g-3 row justify-content-between my-3">
+
+                <div class="wrapper mb-3  कॉल-12 col-12 col-sm-6 mx-auto ">
+                    <div>
+                        
+                        <label for="">आप  हैं :</label>
+                        <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 candidateType" aria-label=".form-select-lg example">
+                            <option value="0" class="bg-dark text-white">चुने</option>
+                            <option value="collegeStudent" class="bg-dark text-white">कॉलेज विद्यार्थी </option>
+                            <option value="schoolStudent" class="bg-dark text-white">स्कूल विद्यार्थी</option>
+                        </select>
+                        <i class="fa-solid fa-circle-check "></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3  कॉल-12 col-12 col-sm-6 mx-auto ">
+                    <div>
+                        
+                        <label for="">आप कहाँ से हैं  :</label>
+                        <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 institute" aria-label=".form-select-lg example" >
+                            <option value="0" class="bg-dark text-white">चुने</option>
+                            <option value="UIT_RGPV" class="bg-dark text-white">यूआइटी,आरजीपीवी,भोपाल </option>
+                            <option value="SOIT" class="bg-dark text-white">एसओआइटी</option>
+                            <option value="OTHER" class="bg-dark text-white">अन्य : <input type="text" class=" appearance-none form-control bg-transparent customInput disabled " placeholder="School/College name" >
+                            </option>
+                        </select>
+                        <i class="fa-solid fa-circle-check "></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+
+                <div class="wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control city bg-transparent">
+                        <label for="floatingInput">शहर </label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                
+
+                <div class="wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control sample bg-transparent">
+                        <label for="floatingInput">नमूना कार्य (ड्राइव लिंक)</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control ref-code bg-transparent">
+                        <label for="floatingInput">रेफरल कोड</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+
+                <div class="wrapper mb-3 कॉल-12 col-12 col-sm-6 mx-auto">
+                    <div class="form-floating">
+                        <input type="text" placeholder=" " id="floatingInput" class="form-control ID bg-transparent">
+                        <label for="floatingInput">पहचान</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+                </div>
+        </div>
+
+        <div class="wrapper my-3">
+            <p class="my-3">पंजीकरण के लिए ईवेंट चुनें:</p>
+            <div class="d-flex justify-content-around flex-wrap">
+
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox1" value="groupDance">
+                    <label class="form-check-label" for="inlineCheckbox1">नृत्य </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox2" value="groupSinging">
+                    <label class="form-check-label" for="inlineCheckbox2">गाना </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox3" value="nukkadNatak">
+                    <label class="form-check-label" for="inlineCheckbox3">नुक्कड़ नाटक </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input event" type="checkbox" id="inlineCheckbox4" value="treasureHunt">
+                    <label class="form-check-label" for="inlineCheckbox4">खजाना की खोज </label>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper form-floating my-3">
+            <input type="text" placeholder="  " id="floatingInput"
+                class="form-control infoSource bg-transparent">
+            <label for="floatingInput">आपको हमारे कार्यक्रम के बारे में कैसे पता चला?</label>
+            <i class="fa-solid fa-circle-check"></i>
+            <i class="fa-solid fa-circle-exclamation invisible"></i>
+            <small class="d-none">
+                Error Message
+            </small>
+        </div>
+            <input class="btn btn-outline-primary contact-btn rounded-1 mb-5 sign-in-button" type="submit" value="पंजीकरण करें">
+
+
+        </form>
+
+
+
+    </section>
+
+     <!-----footer-section---->
+
+
+     <footer class="footer-distributed  ">
+
+        <div class="footer-left">
+          <h3>शंखनाद</h3>
+  
+          <p class="footer-links">
+            <a href="#">Home</a>
+            |
+            <a href="#">About</a>
+            |
+            <a href="#">Events</a>
+            |
+            <a href="#">Contact Us</a>
+          </p>
+  
+          <p class="footer-company-name">Copyright © 2021 <strong>Shankhnaad</strong> All rights reserved</p>
+        </div>
+  
+        <div class="footer-center">
+          <div>
+            <img src="images/location.jpg">
+            <p><span>Bhopal , Madhya Pradesh</p>
+  
+          </div>
+  
+          <div>
+            <img src="images/phone-number.jpg">
+            <p>+91 </p>
+          </div>
+          <div>
+            <img src="images/email.jpg">
+            <p><a href="mailto:">xyz@gmail.com</a></p>
+          </div>
+        </div>
+  
+        <!-----footer-right-section--->
+  
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Shankhnaad</strong> सुनत सुचना खयालात यायेका अविरोधता गुजरना माहितीवानीज्य बदलेबदले मुक्त विकास जिम्मे
+            लचकनहि आवश्यकत लाभो जिम्मे द्वारा सुस्पश्ट भाषा होसके कार्य खयालात वेबजाल और्४५० करते प्रति खयालात शारिरिक
+            करके शीघ्र हैं। सुस्पश्ट सिद्धांत
+  
+          </p>
+          <div class="footer-icons">
+            <a href="#"><img src="images/instagram-4-32.png"></a>
+            <a href="#"><img src="images/linkedin-4-32.png"></a>
+            <a href="#"><img src="images/twitter-4-32.png"></a>
+  
+          </div>
+        </div>
+      </footer>
+    
+
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+  
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+  
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+  
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+      <!--smtpJS-->
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <!--sweetalert-->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <!--Functionality Scripts-->
+      <script src="assets/scripts/index.js"></script>
+      <script type="module" src="assets/scripts/app.js"></script>
+  
+</body>
+
+</html>

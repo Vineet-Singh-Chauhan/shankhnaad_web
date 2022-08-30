@@ -22,6 +22,8 @@
     <section class="contact-section text-white flex justify-content-center align-items-center">
         <a href="leaderboard.html" ><button class="btn btn-primary" >Leaderboard</button></a>
         <a href="campusAmbassadorRegistration.html" ><button class="btn btn-primary" >Campus Ambassador Registration</button></a>
+        <a href="contactUs.html" ><button class="btn btn-primary" >Contact </button></a>
+        <a href="registrationPage.html" ><button class="btn btn-primary" >Register </button></a>
         <div class=" container py-3 row mx-auto gx-5">
 
             <div class="contactUs-image col-12 col-md-6 d-flex justify-content-center align-items-center">
@@ -103,12 +105,12 @@
 
             <!--Individual Registration-->
             <form  method="POST" class="blur-bg p-3 registration-form individualRegistration rounded">
-                <h1 class="display-4 text-center my-4 bold">Individual Registration</h1>
+                <h1 class="display-4 text-center my-4 bold">एकल पंजीकरण</h1>
 
-                <div class="wrapper form-floating mb-3">
-                    <input type="text" placeholder="Enter Your Fullname " id="floatingInput"
+                <div class="wrapper form-floating my-3">
+                    <input type="text" placeholder=" " id="floatingInput"
                         class="form-control name bg-transparent">
-                    <label for="floatingInput">Name</label>
+                    <label for="floatingInput">नाम</label>
                     <i class="fa-solid fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation invisible"></i>
                     <small class="d-none">
@@ -116,23 +118,37 @@
                     </small>
                 </div>
 
-                <div class="wrapper mb-3">
+                <div class="wrapper mb-3 d-flex gap-3">
                     <div class="form-floating">
-                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
-                            placeholder="Enter Your E-mail">
-                        <label for="floatingInput">Email address</label>
+                        <input type="number" class="form-control age bg-transparent" id="floatingInput"
+                            placeholder=" ">
+                        <label for="floatingInput">Age</label>
                         <i class="fa-solid fa-circle-check"></i>
                         <i class="fa-solid fa-circle-exclamation"></i>
                         <small class="d-none">
                             Error Message
                         </small>
                     </div>
+
+                    <div class="form-floating flex-grow-1 ">
+                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                            placeholder=" ">
+                        <label for="floatingInput">ई मेल </label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+
+                    
+
                 </div>
-                <div class="gx-5 row justify-content-between">
+                <div class="gx-5 row justify-content-between my-3">
                     <div class=" wrapper mb-3 col-6">
                         <div class="form-floating">
-                            <input type="number" placeholder="Enter Your phone number" id="floatingInput" class="form-control phone bg-transparent">
-                            <label for="floatingInput">Contact Number</label>
+                            <input type="number" placeholder=" " id="floatingInput" class="form-control phone bg-transparent">
+                            <label for="floatingInput">फोन नंबर (call)</label>
                             <i class="fa-solid fa-circle-check"></i>
                             <i class="fa-solid fa-circle-exclamation"></i>
                             <small class="d-none">
@@ -140,9 +156,110 @@
                             </small>
                         </div>
                     </div>
+
+                    <div class=" wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="number" placeholder=" " id="floatingInput" class="form-control whatsappNumber bg-transparent">
+                            <label for="floatingInput">फोन नंबर (whatsaap)</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="g-3 row justify-content-between my-3">
+
+                    <div class="wrapper mb-3  col-6 ">
+                        <div>
+                            
+                            <label for="">Are you a :</label>
+                            <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 candidateType" aria-label=".form-select-lg example">
+                                <option value="0" class="bg-dark text-white">Select</option>
+                                <option value="collegeStudent" class="bg-dark text-white">College Student</option>
+                                <option value="schoolStudent" class="bg-dark text-white">School Student</option>
+                            </select>
+                            <i class="fa-solid fa-circle-check "></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3  col-6 ">
+                        <div>
+                            
+                            <label for="">You belong to :</label>
+                            <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 institute" aria-label=".form-select-lg example">
+                                <option value="0" class="bg-dark text-white">Select</option>
+                                <option value="UIT_RGPV" class="bg-dark text-white">UIT,RGPV</option>
+                                <option value="SOIT" class="bg-dark text-white">SOIT</option>
+                                <option value="OTHER" class="bg-dark text-white">OTHER : <input type="text" class="d-none appearance-none form-control bg-transparent" placeholder="School/College name ">
+                                </option>
+                            </select>
+                            <i class="fa-solid fa-circle-check "></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+
                     <div class="wrapper mb-3 col-6">
                         <div class="form-floating">
-                            <input type="text" placeholder="Enter Your referral code" id="floatingInput" class="form-control ref-code bg-transparent">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control city bg-transparent">
+                            <label for="floatingInput">City</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control course bg-transparent">
+                            <label for="floatingInput">Course</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control year_or_class bg-transparent">
+                            <label for="floatingInput">Year/Class</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control sample bg-transparent">
+                            <label for="floatingInput">Sample work (drive link)</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control ref-code bg-transparent">
                             <label for="floatingInput">Referral Code</label>
                             <i class="fa-solid fa-circle-check"></i>
                             <i class="fa-solid fa-circle-exclamation"></i>
@@ -151,12 +268,22 @@
                             </small>
                         </div>
                     </div>
-                </div>
 
-                <div class="gx-5 row justify-content-between">
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control ID bg-transparent">
+                            <label for="floatingInput">ID</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
 
                
-                <div class="wrapper mb-3  col-6 ">
+                <!-- <div class="wrapper mb-3  col-6 ">
                     <div>
                         
                         <label for="">Branch</label>
@@ -175,11 +302,11 @@
                             Error Message
                         </small>
                     </div>
-                </div>
+                </div> -->
 
 
 
-                <div class="wrapper mb-3  col-6 ">
+                <!-- <div class="wrapper mb-3  col-6 ">
                     <div>
                         
                         <label for="">Year</label>
@@ -196,14 +323,14 @@
                             Error Message
                         </small>
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div class="wrapper mb-3">
-                <p>Select Events to register for :</p>
+            <div class="wrapper my-3">
+                <p class="my-3">Select Events to register for :</p>
                 <div class="d-flex justify-content-around flex-wrap">
 
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox1" value="facePainting">
                         <label class="form-check-label" for="inlineCheckbox1">आनन चित्रकारी</label>
                     </div>
@@ -211,35 +338,45 @@
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox2" value="singing">
                         <label class="form-check-label" for="inlineCheckbox2">स्वरागिनी</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox3" value="fashionShow">
                         <label class="form-check-label" for="inlineCheckbox3">परिधानिका</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox4" value="dance">
                         <label class="form-check-label" for="inlineCheckbox4">नृत्यांजलि </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox5" value="kaviSammelan">
                         <label class="form-check-label" for="inlineCheckbox5">अमृतवर्षा  </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox6" value="rangoli">
                         <label class="form-check-label" for="inlineCheckbox6"> सारंग </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox7" value="openMic">
                         <label class="form-check-label" for="inlineCheckbox7"> अनकही  </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox8" value="debate">
                         <label class="form-check-label" for="inlineCheckbox8"> वाद–विवाद  </label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline ">
                         <input class="form-check-input event" type="checkbox" id="inlineCheckbox9" value="extempore">
                         <label class="form-check-label" for="inlineCheckbox9"> ओज  </label>
                     </div>
                 </div>
+            </div>
+            <div class="wrapper form-floating my-3">
+                <input type="text" placeholder="  " id="floatingInput"
+                    class="form-control infoSource bg-transparent">
+                <label for="floatingInput">How do you came to know about our event ?</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
             </div>
                 <input class="btn btn-outline-primary contact-btn rounded-1 mb-5 sign-in-button" type="submit" value="Register Now">
 
@@ -247,12 +384,13 @@
             </form>
 
             <!--Team Registration-->
-            <form  method="POST" class="blur-bg p-3 registration-form teamRegistration rounded d-none" >
-                <h1 class="display-4 text-center my-4 bold">Team Registration</h1>
-                <div class="wrapper form-floating mb-3">
-                    <input type="text" placeholder="Name of Team Leader" id="floatingInput"
-                        class="form-control name bg-transparent">
-                    <label for="floatingInput">Name of Team Leader</label>
+            <form  method="POST" class="blur-bg p-3 registration-form teamRegistration rounded d-none">
+                <h1 class="display-4 text-center my-4 bold">समूह पंजीकरण</h1>
+
+                <div class="wrapper form-floating my-3">
+                    <input type="text" placeholder=" " id="floatingInput"
+                        class="form-control teamName bg-transparent">
+                    <label for="floatingInput">team नाम</label>
                     <i class="fa-solid fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation invisible"></i>
                     <small class="d-none">
@@ -260,23 +398,49 @@
                     </small>
                 </div>
 
-                <div class="wrapper mb-3">
+                <div class="wrapper form-floating my-3">
+                    <input type="text" placeholder=" " id="floatingInput"
+                        class="form-control name bg-transparent">
+                    <label for="floatingInput">leader नाम</label>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-circle-exclamation invisible"></i>
+                    <small class="d-none">
+                        Error Message
+                    </small>
+                </div>
+
+                <div class="wrapper mb-3 d-flex gap-3">
+
                     <div class="form-floating">
-                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
-                            placeholder="Enter Your E-mail">
-                        <label for="floatingInput">Email address</label>
+                        <input type="number" class="form-control teamSize bg-transparent" id="floatingInput"
+                            placeholder=" ">
+                        <label for="floatingInput">Team Size</label>
                         <i class="fa-solid fa-circle-check"></i>
                         <i class="fa-solid fa-circle-exclamation"></i>
                         <small class="d-none">
                             Error Message
                         </small>
                     </div>
+
+                    <div class="form-floating flex-grow-1 ">
+                        <input type="email" class="form-control email bg-transparent" id="floatingInput"
+                            placeholder=" ">
+                        <label for="floatingInput">ई मेल</label>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <small class="d-none">
+                            Error Message
+                        </small>
+                    </div>
+
+                    
+
                 </div>
-                <div class="gx-5 row justify-content-between">
+                <div class="gx-5 row justify-content-between my-3">
                     <div class=" wrapper mb-3 col-6">
                         <div class="form-floating">
-                            <input type="number" placeholder="Enter Your phone number" id="floatingInput" class="form-control phone bg-transparent">
-                            <label for="floatingInput">Enter Your phone number</label>
+                            <input type="number" placeholder=" " id="floatingInput" class="form-control phone bg-transparent">
+                            <label for="floatingInput">फोन नंबर (call)</label>
                             <i class="fa-solid fa-circle-check"></i>
                             <i class="fa-solid fa-circle-exclamation"></i>
                             <small class="d-none">
@@ -284,10 +448,11 @@
                             </small>
                         </div>
                     </div>
-                    <div class="wrapper mb-3 col-6">
+
+                    <div class=" wrapper mb-3 col-6">
                         <div class="form-floating">
-                            <input type="text" placeholder="Enter Your referral code" id="floatingInput" class="form-control ref-code bg-transparent">
-                            <label for="floatingInput">Enter Your referral code</label>
+                            <input type="number" placeholder=" " id="floatingInput" class="form-control whatsappNumber bg-transparent">
+                            <label for="floatingInput">फोन नंबर (whatsaap)</label>
                             <i class="fa-solid fa-circle-check"></i>
                             <i class="fa-solid fa-circle-exclamation"></i>
                             <small class="d-none">
@@ -297,10 +462,102 @@
                     </div>
                 </div>
 
-                <div class="gx-5 row justify-content-between">
+                <div class="g-3 row justify-content-between my-3">
+
+                    <div class="wrapper mb-3  col-6 ">
+                        <div>
+                            
+                            <label for="">Are you a :</label>
+                            <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 candidateType" aria-label=".form-select-lg example">
+                                <option value="0" class="bg-dark text-white">Select</option>
+                                <option value="collegeStudent" class="bg-dark text-white">College Student</option>
+                                <option value="schoolStudent" class="bg-dark text-white">School Student</option>
+                            </select>
+                            <i class="fa-solid fa-circle-check "></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3  col-6 ">
+                        <div>
+                            
+                            <label for="">You belong to :</label>
+                            <select select class="form-select form-select-lg mb-3 bg-transparent  text-white p-3 institute" aria-label=".form-select-lg example" onchange="if(this.options[this.selectedIndex].value=='OTHER'){
+                                togglefield(true)}
+                                else{
+                                    togglefield(false)
+                                }">
+                                <option value="0" class="bg-dark text-white">Select</option>
+                                <option value="UIT_RGPV" class="bg-dark text-white">UIT,RGPV</option>
+                                <option value="SOIT" class="bg-dark text-white">SOIT</option>
+                                <option value="OTHER" class="bg-dark text-white">OTHER : <input type="text" class="d-none appearance-none form-control bg-transparent customInput" placeholder="School/College name" >
+                                </option>
+                            </select>
+                            <i class="fa-solid fa-circle-check "></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control city bg-transparent">
+                            <label for="floatingInput">City</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control sample bg-transparent">
+                            <label for="floatingInput">Sample work (drive link)</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control ref-code bg-transparent">
+                            <label for="floatingInput">Referral Code</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="wrapper mb-3 col-6">
+                        <div class="form-floating">
+                            <input type="text" placeholder=" " id="floatingInput" class="form-control ID bg-transparent">
+                            <label for="floatingInput">ID</label>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <small class="d-none">
+                                Error Message
+                            </small>
+                        </div>
+                    </div>
+
 
                
-                <div class="wrapper mb-3  col-6 ">
+                <!-- <div class="wrapper mb-3  col-6 ">
                     <div>
                         
                         <label for="">Branch</label>
@@ -319,11 +576,11 @@
                             Error Message
                         </small>
                     </div>
-                </div>
+                </div> -->
 
 
 
-                <div class="wrapper mb-3  col-6 ">
+                <!-- <div class="wrapper mb-3  col-6 ">
                     <div>
                         
                         <label for="">Year</label>
@@ -340,23 +597,40 @@
                             Error Message
                         </small>
                     </div>
-                </div>
+                </div> -->
             </div>
 
-            <div class="wrapper mb-3">
-                <p>Select Events to register for :</p>
+            <div class="wrapper my-3">
+                <p class="my-3">Select Events to register for :</p>
                 <div class="d-flex justify-content-around flex-wrap">
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox1" value="nukkadNatak">
-                        <label class="form-check-label" for="inlineCheckbox1">नुक्कड़ नाटक</label>
+                    <div class="form-check form-check-inline ">
+                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox1" value="groupDance">
+                        <label class="form-check-label" for="inlineCheckbox1">dance</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox2" value="treasureHunt">
-                        <label class="form-check-label" for="inlineCheckbox2">लक्ष्य</label>
+                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox2" value="groupSinging">
+                        <label class="form-check-label" for="inlineCheckbox2">groupSinging</label>
                     </div>
-                    
+                    <div class="form-check form-check-inline ">
+                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox3" value="nukkadNatak">
+                        <label class="form-check-label" for="inlineCheckbox3">nukkadNatak</label>
+                    </div>
+                    <div class="form-check form-check-inline ">
+                        <input class="form-check-input event" type="checkbox" id="inlineCheckbox4" value="treasureHunt">
+                        <label class="form-check-label" for="inlineCheckbox4">treasureHunt</label>
+                    </div>
                 </div>
+            </div>
+            <div class="wrapper form-floating my-3">
+                <input type="text" placeholder="  " id="floatingInput"
+                    class="form-control infoSource bg-transparent">
+                <label for="floatingInput">How do you came to know about our event ?</label>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation invisible"></i>
+                <small class="d-none">
+                    Error Message
+                </small>
             </div>
                 <input class="btn btn-outline-primary contact-btn rounded-1 mb-5 sign-in-button" type="submit" value="Register Now">
 
@@ -364,6 +638,7 @@
             </form>
         </div>
     </section>
+
     
     <!--smtpJS-->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
